@@ -85,46 +85,22 @@
             //calcute 
         }
 
-        // function checkForCollion() {
-        //     ufos.forEach(function(ufo) {
-        //         if(rocket.x + rocket.width > ufo.x && rocket.y + rocket.height > ufo.y
-        //         && rocket.x < ufo.x && rocket.y < ufo.y)
-        //         {
-        //             rocket.img.src = 'img/BOOM.png';
-        //             console.log('Collion!!!');
-        //             ufos = ufos.filter(u => u != ufo);
-        //         }
+         function checkForCollion() {
+             ufos.forEach(function(ufo) {
+                 if(rocket.x + rocket.width > ufo.x && rocket.y + rocket.height > ufo.y
+                 && rocket.x < ufo.x && rocket.y < ufo.y)
+                 {
+                     rocket.img.src = 'img/BOOM.png';
+                     console.log('Collion!!!');
+                     ufos = ufos.filter(u => u != ufo);
+                 }
 
                 
-        //     });
+             });
 
-        // }
+         }
 
-        function checkForCollision() {
-            ufos.forEach(function(ufo) {
-                if (
-                    rocket.x < ufo.x + ufo.width &&
-                    rocket.x + rocket.width > ufo.x &&
-                    rocket.y < ufo.y + ufo.height &&
-                    rocket.y + rocket.height > ufo.y
-                ) {
-                    // Explosion anzeigen
-                    rocket.img.src = 'img/BOOM.png';
 
-                    console.log('Collision!!!');
-
-                    ufos = ufos.filter(u => u != ufo);
-
-                    // Spiel beenden
-                    //gameOver = true;
-
-                    // GAME OVER nach 1 Sekunde anzeigen
-                    //setTimeout(function() {
-                    //    alert('GAME OVER!');
-                    //}, 1000);
-                }
-            });
-        }
 
 
 
